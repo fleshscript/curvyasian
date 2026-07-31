@@ -72,7 +72,22 @@
     <video class="lightbox-video" controls playsinline></video>
     <button class="lightbox-next" type="button" aria-label="Next video">&#10095;</button>
   </div>
+  
+  <script>
+const sourceGallery = document.querySelector('.video-gallery');
+const sourceItems = [...sourceGallery.children];
 
+// Shuffle
+for (let index = sourceItems.length - 1; index > 0; index--) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [sourceItems[index], sourceItems[randomIndex]] =
+        [sourceItems[randomIndex], sourceItems[index]];
+}
+
+// Keep only the first 8
+sourceItems.slice(0, 8).forEach(item => sourceGallery.append(item));
+sourceItems.slice(8).forEach(item => item.remove());
+</script>
   <script src="lightbox.js"></script>
 </body>
 </html>
