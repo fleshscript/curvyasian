@@ -317,6 +317,12 @@ main {
     left: 0;
   }
 
+  .comments {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
   .lightbox-next {
     right: 0;
   }
