@@ -40,10 +40,6 @@
         <a class="download-button" href="media/g6.gif" download data-umami-event="file-download" data-umami-event-file="g6.gif">Download GIF</a>
       </article>
       <article class="gif-card">
-        <a class="gallery-item" href="media/g7.gif"><img src="media/g7.gif" alt="GIF 7" loading="lazy"></a>
-        <a class="download-button" href="media/g7.gif" download data-umami-event="file-download" data-umami-event-file="g7.gif">Download GIF</a>
-      </article>
-      <article class="gif-card">
         <a class="gallery-item" href="media/g8.gif"><img src="media/g8.gif" alt="GIF 8" loading="lazy"></a>
         <a class="download-button" href="media/g8.gif" download data-umami-event="file-download" data-umami-event-file="g8.gif">Download GIF</a>
       </article>
@@ -84,9 +80,9 @@ for (let index = gifItems.length - 1; index > 0; index--) {
         [gifItems[randomIndex], gifItems[index]];
 }
 
-// Keep only the first 8
-gifItems.slice(0, 8).forEach(item => gifGallery.append(item));
-gifItems.slice(8).forEach(item => item.remove());
+// Keep only the first 6
+gifItems.slice(0, 6).forEach(item => gifGallery.append(item));
+gifItems.slice(6).forEach(item => item.remove());
 </script>
 
   <script src="lightbox.js"></script>
