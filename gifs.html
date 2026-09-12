@@ -69,6 +69,22 @@
     <button class="lightbox-next" type="button" aria-label="Next GIF">&#10095;</button>
   </div>
 
+  <script>
+const gifGallery = document.querySelector('.gif-gallery');
+const gifItems = [...gifGallery.children];
+
+// Shuffle
+for (let index = gifItems.length - 1; index > 0; index--) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [gifItems[index], gifItems[randomIndex]] =
+        [gifItems[randomIndex], gifItems[index]];
+}
+
+// Keep only the first 8
+gifItems.slice(0, 8).forEach(item => gifGallery.append(item));
+gifItems.slice(8).forEach(item => item.remove());
+</script>
+
   <script src="lightbox.js"></script>
 </body>
 </html>
